@@ -8,38 +8,47 @@
 
 import UIKit
 
-class CollectionViewController: UICollectionViewController {
 private let reuseIdentifier = "releaseCell"
 
+class CollectionViewController: UICollectionViewController, JsonParserDelegate {
+    var releases = Array<String>()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         //self.collectionView!.registerClass(ReleaseCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
-        // Do any additional setup after loading the view.
+        let parser = JsonParser(delegate: self)
+        parser.retrieveRelease()
     }
     }
     
 
+    // MARK: - JsonParserDelegate
+    
+    func didParseRelease(title: String?) {
+        releases.append(title!)
+        dispatch_async(dispatch_get_main_queue()) { 
+            self.collectionView?.reloadData()
+        }
     }
+    
 
     // MARK: UICollectionViewDataSource
 
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
-
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
+        return self.releases.count
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! ReleaseCollectionViewCell
     
-        // Configure the cell
+        cell.nameLabel.text = self.releases[indexPath.item]
     
         return cell
     }
