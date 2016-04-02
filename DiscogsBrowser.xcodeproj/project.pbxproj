@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		261B6F111CAFCF93002C1D50 /* DiscogsBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiscogsBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		261B6F111CAFCF93002C1D50 /* Browser for Discogs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Browser for Discogs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		261B6F141CAFCF93002C1D50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		261B6F161CAFCF93002C1D50 /* JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 		261B6F191CAFCF93002C1D50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		261B6F121CAFCF93002C1D50 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				261B6F111CAFCF93002C1D50 /* DiscogsBrowser.app */,
+				261B6F111CAFCF93002C1D50 /* Browser for Discogs.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,7 +90,7 @@
 			);
 			name = DiscogsBrowser;
 			productName = DiscogsBrowser;
-			productReference = 261B6F111CAFCF93002C1D50 /* DiscogsBrowser.app */;
+			productReference = 261B6F111CAFCF93002C1D50 /* Browser for Discogs.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -266,7 +266,7 @@
 				INFOPLIST_FILE = DiscogsBrowser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pg.DiscogsBrowser;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Browser for Discogs";
 			};
 			name = Debug;
 		};
@@ -277,7 +277,7 @@
 				INFOPLIST_FILE = DiscogsBrowser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pg.DiscogsBrowser;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Browser for Discogs";
 			};
 			name = Release;
 		};
