@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		261B6F151CAFCF93002C1D50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261B6F141CAFCF93002C1D50 /* AppDelegate.swift */; };
+		261B6F171CAFCF93002C1D50 /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261B6F161CAFCF93002C1D50 /* JsonParser.swift */; };
 		261B6F1A1CAFCF93002C1D50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 261B6F181CAFCF93002C1D50 /* Main.storyboard */; };
 		261B6F1D1CAFCF93002C1D50 /* DiscogsBrowser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 261B6F1B1CAFCF93002C1D50 /* DiscogsBrowser.xcdatamodeld */; };
 		261B6F1F1CAFCF93002C1D50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 261B6F1E1CAFCF93002C1D50 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		261B6F111CAFCF93002C1D50 /* DiscogsBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiscogsBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		261B6F141CAFCF93002C1D50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		261B6F161CAFCF93002C1D50 /* JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 		261B6F191CAFCF93002C1D50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		261B6F1C1CAFCF93002C1D50 /* DiscogsBrowser.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DiscogsBrowser.xcdatamodel; sourceTree = "<group>"; };
 		261B6F1E1CAFCF93002C1D50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				261B6F141CAFCF93002C1D50 /* AppDelegate.swift */,
+				261B6F161CAFCF93002C1D50 /* JsonParser.swift */,
 				261B6F181CAFCF93002C1D50 /* Main.storyboard */,
 				261B6F1E1CAFCF93002C1D50 /* Assets.xcassets */,
 				261B6F201CAFCF93002C1D50 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				261B6F171CAFCF93002C1D50 /* JsonParser.swift in Sources */,
 				261B6F151CAFCF93002C1D50 /* AppDelegate.swift in Sources */,
 				26E1AC8E1CAFF10300BFE169 /* ReleaseCollectionViewCell.swift in Sources */,
 				261B6F1D1CAFCF93002C1D50 /* DiscogsBrowser.xcdatamodeld in Sources */,
