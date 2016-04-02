@@ -22,6 +22,11 @@ class CollectionViewController: UICollectionViewController, JsonParserDelegate {
         let parser = JsonParser(delegate: self)
         parser.retrieveRelease()
     }
+    
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+        
+        self.collectionViewLayout.invalidateLayout()
     }
     
 
@@ -55,6 +60,10 @@ class CollectionViewController: UICollectionViewController, JsonParserDelegate {
 
     // MARK: UICollectionViewDelegate
     
+    func collectionView(collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return CGSizeMake(collectionView.bounds.size.width, CGFloat(70))
     }
 
 }
