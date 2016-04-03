@@ -64,14 +64,10 @@
 		261B6F131CAFCF93002C1D50 /* DiscogsBrowser */ = {
 			isa = PBXGroup;
 			children = (
-				26E1AC911CB021CD00BFE169 /* Data */,
-				261B6F141CAFCF93002C1D50 /* AppDelegate.swift */,
-				261B6F161CAFCF93002C1D50 /* JsonParser.swift */,
+				26FE9ECD1CB133B100F49004 /* Supporting Files */,
 				261B6F181CAFCF93002C1D50 /* Main.storyboard */,
-				261B6F1E1CAFCF93002C1D50 /* Assets.xcassets */,
-				261B6F201CAFCF93002C1D50 /* LaunchScreen.storyboard */,
-				261B6F231CAFCF93002C1D50 /* Info.plist */,
-				261B6F1B1CAFCF93002C1D50 /* DiscogsBrowser.xcdatamodeld */,
+				26E1AC911CB021CD00BFE169 /* Data */,
+				261B6F161CAFCF93002C1D50 /* JsonParser.swift */,
 				2693897C1CB10E3E00D86FEF /* MainViewController.swift */,
 				26E1AC8B1CAFEF6400BFE169 /* ReleasesCollectionViewController.swift */,
 				26E1AC8D1CAFF10300BFE169 /* ReleaseCollectionViewCell.swift */,
@@ -85,6 +81,18 @@
 				26E1AC921CB021E200BFE169 /* Release.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		26FE9ECD1CB133B100F49004 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				261B6F141CAFCF93002C1D50 /* AppDelegate.swift */,
+				261B6F1E1CAFCF93002C1D50 /* Assets.xcassets */,
+				261B6F201CAFCF93002C1D50 /* LaunchScreen.storyboard */,
+				261B6F231CAFCF93002C1D50 /* Info.plist */,
+				261B6F1B1CAFCF93002C1D50 /* DiscogsBrowser.xcdatamodeld */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
