@@ -11,7 +11,7 @@ import UIKit
 private let reuseIdentifier = "releaseCell"
 
 class CollectionViewController: UICollectionViewController, JsonParserDelegate {
-    var releases = Array<String>()
+    var releases = Array<Release>()
     
     
     override func viewDidLoad() {
@@ -32,8 +32,8 @@ class CollectionViewController: UICollectionViewController, JsonParserDelegate {
 
     // MARK: - JsonParserDelegate
     
-    func didParseRelease(title: String?) {
-        releases.append(title!)
+    func didParseRelease(release: Release) {
+        releases.append(release)
         dispatch_async(dispatch_get_main_queue()) { 
             self.collectionView?.reloadData()
         }
@@ -53,8 +53,7 @@ class CollectionViewController: UICollectionViewController, JsonParserDelegate {
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! ReleaseCollectionViewCell
     
-        cell.nameLabel.text = self.releases[indexPath.item]
-    
+        cell.updateText(self.releases[indexPath.item])
         return cell
     }
 

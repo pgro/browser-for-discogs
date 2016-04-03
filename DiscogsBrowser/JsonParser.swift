@@ -9,7 +9,7 @@
 import Foundation
 
 protocol JsonParserDelegate {
-    func didParseRelease(title: String?)
+    func didParseRelease(release: Release)
 }
 
 class JsonParser {
@@ -47,8 +47,26 @@ class JsonParser {
     }
     
     func parseJson(json: NSDictionary) {
-        self.delegate?.didParseRelease(json["title"] as? String)
+        let release = Release()
+        release.title = json["title"] as? String
+        release.artist = self.extractFirstArtist(json)
+        release.releaseYear = self.extractYear(json)
+        release.thumbnailUrl = json["thumb"] as? String
+        self.delegate?.didParseRelease(release)
     }
 
+    private func extractFirstArtist(json: NSDictionary) -> String? {
+        let artists = json["artists"] as? NSArray
+        let artist = artists?.firstObject as? NSDictionary
+        let name = artist?["name"] as? String
+        return name
+    }
+    
+    private func extractYear(json: NSDictionary) -> String? {
+        var year = json["released"] as? String
+        let index = year?.startIndex.advancedBy(4)
+        year = year?.substringToIndex(index!)
+        return year
+    }
 }
 
