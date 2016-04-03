@@ -10,21 +10,36 @@ import UIKit
 
 class MainViewController: UIViewController {
     @IBOutlet weak var loadIndicator: UIActivityIndicatorView!
+    var releasesController: ReleasesCollectionViewController?
+    var releases = Array<Release>()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.automaticallyAdjustsScrollViewInsets = false
+        
+        self.loadIndicator?.startAnimating()
+        let parser = JsonParser(delegate: self)
+        parser.retrieveRelease()
     }
     
     
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        let releasesController = segue.destinationViewController as? ReleasesCollectionViewController
-        releasesController?.loadIndicator = self.loadIndicator
+        self.releasesController = segue.destinationViewController as? ReleasesCollectionViewController
     }
 
+}
+
+
+// MARK: - JsonParserDelegate
+
+extension MainViewController: JsonParserDelegate {
+    func didParseRelease(release: Release) {
+        releases.append(release)
+        dispatch_async(dispatch_get_main_queue()) {
+            self.releasesController?.releases = self.releases
+            self.releasesController?.collectionView?.reloadData()
+            self.loadIndicator?.stopAnimating()
+        }
+    }
 }

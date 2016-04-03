@@ -10,36 +10,20 @@ import UIKit
 
 private let reuseIdentifier = "releaseCell"
 
-class ReleasesCollectionViewController: UICollectionViewController, JsonParserDelegate {
+class ReleasesCollectionViewController: UICollectionViewController {
     var releases = Array<Release>()
-    weak var loadIndicator: UIActivityIndicatorView?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         //self.collectionView!.registerClass(ReleaseCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        self.loadIndicator?.startAnimating()
-        let parser = JsonParser(delegate: self)
-        parser.retrieveRelease()
     }
     
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
         
         self.collectionViewLayout.invalidateLayout()
-    }
-    
-
-    // MARK: - JsonParserDelegate
-    
-    func didParseRelease(release: Release) {
-        releases.append(release)
-        dispatch_async(dispatch_get_main_queue()) { 
-            self.collectionView?.reloadData()
-            self.loadIndicator?.stopAnimating()
-        }
     }
     
 
