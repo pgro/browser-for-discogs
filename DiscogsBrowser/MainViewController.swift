@@ -11,7 +11,6 @@ import UIKit
 class MainViewController: UIViewController {
     @IBOutlet weak var loadIndicator: UIActivityIndicatorView!
     var releasesController: ReleasesCollectionViewController?
-    var releases = Array<Release>()
     
 
     override func viewDidLoad() {
@@ -34,10 +33,9 @@ class MainViewController: UIViewController {
 // MARK: - JsonParserDelegate
 
 extension MainViewController: JsonParserDelegate {
-    func didParseRelease(release: Release) {
-        releases.append(release)
+    func didParseReleases(releases: Array<Release>) {
+        self.releasesController?.releases = releases
         dispatch_async(dispatch_get_main_queue()) {
-            self.releasesController?.releases = self.releases
             self.releasesController?.collectionView?.reloadData()
             self.loadIndicator?.stopAnimating()
         }
