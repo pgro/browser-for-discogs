@@ -11,6 +11,11 @@ import UIKit
 class MainViewController: UIViewController {
     @IBOutlet weak var loadIndicator: UIActivityIndicatorView!
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.automaticallyAdjustsScrollViewInsets = false
+    }
+    
     
     // MARK: - Navigation
 
