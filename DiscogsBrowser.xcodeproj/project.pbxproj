@@ -13,6 +13,7 @@
 		261B6F1D1CAFCF93002C1D50 /* DiscogsBrowser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 261B6F1B1CAFCF93002C1D50 /* DiscogsBrowser.xcdatamodeld */; };
 		261B6F1F1CAFCF93002C1D50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 261B6F1E1CAFCF93002C1D50 /* Assets.xcassets */; };
 		261B6F221CAFCF93002C1D50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 261B6F201CAFCF93002C1D50 /* LaunchScreen.storyboard */; };
+		2693897D1CB10E3E00D86FEF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2693897C1CB10E3E00D86FEF /* MainViewController.swift */; };
 		26E1AC8C1CAFEF6400BFE169 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E1AC8B1CAFEF6400BFE169 /* CollectionViewController.swift */; };
 		26E1AC8E1CAFF10300BFE169 /* ReleaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E1AC8D1CAFF10300BFE169 /* ReleaseCollectionViewCell.swift */; };
 		26E1AC931CB021E200BFE169 /* Release.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E1AC921CB021E200BFE169 /* Release.swift */; };
@@ -27,6 +28,7 @@
 		261B6F1E1CAFCF93002C1D50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		261B6F211CAFCF93002C1D50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		261B6F231CAFCF93002C1D50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2693897C1CB10E3E00D86FEF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		26E1AC8B1CAFEF6400BFE169 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		26E1AC8D1CAFF10300BFE169 /* ReleaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReleaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		26E1AC921CB021E200BFE169 /* Release.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Release.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				261B6F201CAFCF93002C1D50 /* LaunchScreen.storyboard */,
 				261B6F231CAFCF93002C1D50 /* Info.plist */,
 				261B6F1B1CAFCF93002C1D50 /* DiscogsBrowser.xcdatamodeld */,
+				2693897C1CB10E3E00D86FEF /* MainViewController.swift */,
 				26E1AC8B1CAFEF6400BFE169 /* CollectionViewController.swift */,
 				26E1AC8D1CAFF10300BFE169 /* ReleaseCollectionViewCell.swift */,
 			);
@@ -155,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2693897D1CB10E3E00D86FEF /* MainViewController.swift in Sources */,
 				261B6F171CAFCF93002C1D50 /* JsonParser.swift in Sources */,
 				26E1AC931CB021E200BFE169 /* Release.swift in Sources */,
 				261B6F151CAFCF93002C1D50 /* AppDelegate.swift in Sources */,

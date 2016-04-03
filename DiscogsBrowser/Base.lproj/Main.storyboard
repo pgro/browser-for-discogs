@@ -15,19 +15,60 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="NlC-sC-bc3" kind="relationship" relationship="rootViewController" id="cVl-Ec-8yb"/>
+                        <segue destination="QxL-gL-y5k" kind="relationship" relationship="rootViewController" id="yzQ-BX-ESX"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NM9-o2-4qh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-508" y="154"/>
+            <point key="canvasLocation" x="-1600" y="-1656"/>
         </scene>
         <!--Browser for Discogs-->
+        <scene sceneID="49M-CL-Cmi">
+            <objects>
+                <viewController id="QxL-gL-y5k" customClass="MainViewController" customModule="Browser_for_Discogs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dNQ-oa-ubA"/>
+                        <viewControllerLayoutGuide type="bottom" id="m9M-HX-9KB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IBU-OL-nHo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pv8-VN-UKs">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <connections>
+                                    <segue destination="NlC-sC-bc3" kind="embed" id="13i-h6-Hp6"/>
+                                </connections>
+                            </containerView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="JzA-ao-BV4">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="m9M-HX-9KB" firstAttribute="top" secondItem="pv8-VN-UKs" secondAttribute="bottom" id="2KY-fc-e84"/>
+                            <constraint firstItem="JzA-ao-BV4" firstAttribute="centerX" secondItem="IBU-OL-nHo" secondAttribute="centerX" id="4gs-id-mDu"/>
+                            <constraint firstItem="JzA-ao-BV4" firstAttribute="centerY" secondItem="IBU-OL-nHo" secondAttribute="centerY" id="FTV-NP-yWH"/>
+                            <constraint firstItem="pv8-VN-UKs" firstAttribute="top" secondItem="dNQ-oa-ubA" secondAttribute="bottom" id="rde-Yq-8Sx"/>
+                            <constraint firstItem="pv8-VN-UKs" firstAttribute="leading" secondItem="IBU-OL-nHo" secondAttribute="leading" id="uxO-1f-4ac"/>
+                            <constraint firstAttribute="trailing" secondItem="pv8-VN-UKs" secondAttribute="trailing" id="xgo-J3-lAG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Browser for Discogs" id="3wE-NW-EdW"/>
+                    <connections>
+                        <outlet property="loadIndicator" destination="JzA-ao-BV4" id="1Xr-9H-zmZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7AV-KQ-zzo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1120" y="-1656"/>
+        </scene>
+        <!--Collection View Controller-->
         <scene sceneID="TS6-2z-LTg">
             <objects>
                 <collectionViewController id="NlC-sC-bc3" customClass="CollectionViewController" customModule="Browser_for_Discogs" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="vJg-oO-YrA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pDH-no-tgk">
@@ -38,7 +79,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="releaseCell" id="bTT-nN-dWd" customClass="ReleaseCollectionViewCell" customModule="Browser_for_Discogs" customModuleProvider="target">
-                                <rect key="frame" x="10" y="64" width="300" height="60"/>
+                                <rect key="frame" x="10" y="0.0" width="300" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="60"/>
@@ -70,11 +111,10 @@
                             <outlet property="delegate" destination="NlC-sC-bc3" id="mbd-MI-16f"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Browser for Discogs" id="bb3-fV-ddr"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rrp-fH-hBY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-48" y="154"/>
+            <point key="canvasLocation" x="-674" y="-1656"/>
         </scene>
     </scenes>
 </document>

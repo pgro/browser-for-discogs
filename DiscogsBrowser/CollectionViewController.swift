@@ -12,6 +12,7 @@ private let reuseIdentifier = "releaseCell"
 
 class CollectionViewController: UICollectionViewController, JsonParserDelegate {
     var releases = Array<Release>()
+    weak var loadIndicator: UIActivityIndicatorView?
     
     
     override func viewDidLoad() {
@@ -19,6 +20,7 @@ class CollectionViewController: UICollectionViewController, JsonParserDelegate {
 
         //self.collectionView!.registerClass(ReleaseCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
+        self.loadIndicator?.startAnimating()
         let parser = JsonParser(delegate: self)
         parser.retrieveRelease()
     }
@@ -36,6 +38,7 @@ class CollectionViewController: UICollectionViewController, JsonParserDelegate {
         releases.append(release)
         dispatch_async(dispatch_get_main_queue()) { 
             self.collectionView?.reloadData()
+            self.loadIndicator?.stopAnimating()
         }
     }
     
