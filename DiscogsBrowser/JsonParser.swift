@@ -22,7 +22,7 @@ class JsonParser {
 
     func retrieveRelease() {
         let url = "https://api.discogs.com/releases/249504"
-        let userAgent = "FooBarApp/3.0"
+        let userAgent = "BrowserForDiscogs/0.1 +https://github.com/pgro/browser-for-discogs"
         
         let request = NSMutableURLRequest(URL: NSURL(string: url)!)
         request.setValue(userAgent, forHTTPHeaderField: "User-Agent")
