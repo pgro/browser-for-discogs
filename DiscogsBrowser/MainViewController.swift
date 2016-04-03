@@ -18,8 +18,8 @@ class MainViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        let releaseController = segue.destinationViewController as? CollectionViewController
-        releaseController?.loadIndicator = self.loadIndicator
+        let releasesController = segue.destinationViewController as? ReleasesCollectionViewController
+        releasesController?.loadIndicator = self.loadIndicator
     }
 
 }

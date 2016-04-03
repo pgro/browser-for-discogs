@@ -10,7 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "releaseCell"
 
-class CollectionViewController: UICollectionViewController, JsonParserDelegate {
+class ReleasesCollectionViewController: UICollectionViewController, JsonParserDelegate {
     var releases = Array<Release>()
     weak var loadIndicator: UIActivityIndicatorView?
     

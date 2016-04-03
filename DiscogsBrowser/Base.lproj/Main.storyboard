@@ -63,10 +63,10 @@
             </objects>
             <point key="canvasLocation" x="-1120" y="-1656"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Releases Collection View Controller-->
         <scene sceneID="TS6-2z-LTg">
             <objects>
-                <collectionViewController id="NlC-sC-bc3" customClass="CollectionViewController" customModule="Browser_for_Discogs" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="NlC-sC-bc3" customClass="ReleasesCollectionViewController" customModule="Browser_for_Discogs" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="vJg-oO-YrA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
