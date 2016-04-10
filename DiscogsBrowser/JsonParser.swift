@@ -68,7 +68,8 @@ class JsonParser {
         let release = Release()
         release.title = json["title"] as? String
         release.artist = json["artist"] as? String
-        release.releaseYear = json["year"] as? String
+        let year = json["year"] as? NSNumber
+        release.releaseYear = year?.stringValue
         release.thumbnailUrl = json["thumb"] as? String
         return release
     }
@@ -77,8 +78,8 @@ class JsonParser {
     func parseReleaseJson(json: NSDictionary) -> Release {
         let release = Release()
         release.title = json["title"] as? String
-        release.artist = self.extractFirstArtist(json)
-        release.releaseYear = self.extractYear(json)
+        let year = json["year"] as? NSNumber
+        release.releaseYear = year?.stringValue
         release.thumbnailUrl = json["thumb"] as? String
         return release
     }
@@ -88,13 +89,6 @@ class JsonParser {
         let artist = artists?.firstObject as? NSDictionary
         let name = artist?["name"] as? String
         return name
-    }
-    
-    private func extractYear(json: NSDictionary) -> String? {
-        var year = json["released"] as? String
-        let index = year?.startIndex.advancedBy(4)
-        year = year?.substringToIndex(index!)
-        return year
     }
 }
 
